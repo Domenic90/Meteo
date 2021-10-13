@@ -1,11 +1,12 @@
 
 
- <div class="container">
+<div class="container">
 
-  <div class="row">
 
-    <div class="col-md-6">
 
+<div class="row">
+
+    <div class="col-sm-6">
       <h3 class="text-center my-4">Ricerca per Località:</h3>
       <form [formGroup]="weatherSearchForm" (ngSubmit)="sendToAPIXU(weatherSearchForm.value)">
         <div class="form-group">
@@ -19,27 +20,53 @@
       </form>
     </div>
 
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="https://img.freepik.com/premium-vector/weather-icons_8071-15.jpg?size=626&ext=jpgg" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Dettagli Meteo</h5>
+
+            <p class="card-text">Città: {{this.weatherData?.request.query}}</p>
+            <p class="card-text">Condizioni Meteo Attuali: {{this.weatherData?.current.weather_descriptions}}
+              <img
+                src={{this.weatherData?.current.weather_icons[0]}} style="width: 25px;"> </p>
+            <p class="card-text">Temperatura in gradi Celsius: {{this.weatherData?.current.temperature}} </p>
 
 
-    <div class="card-group">
-    <div class="card text-white bg-primary mb-3" style="max-width: 30rem;">
-      <div class="card-body">
-        <h5 class="card-title">Meteo Città Selezionata</h5>
-        <p class="text-center">Città: {{this.weatherData?.request.query}}</p>
-        <p class="text-center">Condizioni Meteo Attuali: {{this.weatherData?.current.weather_descriptions}}
-          <img
-            src={{this.weatherData?.current.weather_icons[0]}} style="width: 25px;"> </p>
-        <p class="text-center">Temperatura in gradi Celsius: {{this.weatherData?.current.temperature}} </p>
-
-
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
       </div>
     </div>
 
+
+
+
+
 </div>
 
 
-  </div>
+
+
+
+
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
