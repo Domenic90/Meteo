@@ -11,14 +11,34 @@ export class CittaPrincipaliComponent implements OnInit {
   public weatherData: any;
 
 
+
+
   constructor(
     private apixuService: ApixuService
+
+
+
   ) {}
+
+
 
   ngOnInit(): void {
 
+
   }
 
+
+
+
+
+
+  sendToAPIXU() {
+    this.apixuService
+    .getWeather(location)
+    .subscribe(data => { this.weatherData = data;
+     console.log(this.weatherData)
+    });
+  }
 
 }
 

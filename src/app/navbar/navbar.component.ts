@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ApixuService } from '../apixu.service';
 
@@ -9,7 +9,7 @@ import { ApixuService } from '../apixu.service';
 })
 export class NavbarComponent implements OnInit {
   public weatherSearchForm!: FormGroup;
-  public weatherData: any;
+  @Output() public weatherData: any;
 
 
   constructor(
