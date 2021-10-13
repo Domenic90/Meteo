@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApixuService } from '../apixu.service';
+
 
 @Component({
   selector: 'app-citta-principali',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./citta-principali.component.css']
 })
 export class CittaPrincipaliComponent implements OnInit {
+  public weatherData: any;
 
-  constructor() { }
+
+  constructor(
+    private apixuService: ApixuService
+  ) {}
 
   ngOnInit(): void {
+
   }
 
+
 }
+
+

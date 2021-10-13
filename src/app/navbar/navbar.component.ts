@@ -8,7 +8,6 @@ import { ApixuService } from '../apixu.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
   public weatherSearchForm!: FormGroup;
   public weatherData: any;
 
@@ -16,11 +15,11 @@ export class NavbarComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private apixuService: ApixuService
-    ) { }
+    ) {}
 
   ngOnInit(): void {
     this.weatherSearchForm = this.formBuilder.group({
-      location: [''],
+      location: ['']
     });
   }
 
