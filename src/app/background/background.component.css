@@ -1,4 +1,6 @@
 img {
+  position:relative;
+  bottom: 24px;
   width: 1300px;
   height: 200px;
 }

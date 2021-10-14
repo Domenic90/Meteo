@@ -11,6 +11,7 @@ import { ApixuService } from './apixu.service';
 import { BackgroundComponent } from './background/background.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CittaPrincipaliComponent } from './citta-principali/citta-principali.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CittaPrincipaliComponent } from './citta-principali/citta-principali.co
     WeatherComponent,
     BackgroundComponent,
     NavbarComponent,
-    CittaPrincipaliComponent
+    CittaPrincipaliComponent,
+    FooterComponent
 
   ],
   imports: [
