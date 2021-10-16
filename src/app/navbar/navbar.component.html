@@ -1,17 +1,19 @@
 <div class="container">
 
-  <nav class="navbar">
-    <div class="container">
-      <a class="btn btn-outline-warning" href="http://localhost:4200/">METEO</a>
+  <nav class="navbar navbar-light" style="background-color:rgba(33, 22, 185, 0.986);" >
+      <a class="btn btn-outline-primary" href="http://localhost:4200/">METEO</a>
       <form class="d-flex" [formGroup]="weatherSearchForm" (ngSubmit)="sendToAPIXU(weatherSearchForm.value)">
-         <input class="form-control me-2" type="search" id="weatherLocation" placeholder="Inserisci la tua località" formControlName="location"  aria-label="weatherLocation">
-        <button type="submit" class="btn btn-primary">Cerca</button>
+         <input class="form-control me-2" type="search" id="weatherLocation"
+         placeholder="Inserisci la tua località" formControlName="location"
+         aria-label="weatherLocation" #citta>
+        <button type="submit" class="btn btn-success" (click)="addCitta(citta.value)">Cerca</button>
       </form>
-    </div>
   </nav>
 
 </div>
 
+
+<app-weather [weatherData] = "weatherData"></app-weather>
 
 
 

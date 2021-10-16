@@ -3,12 +3,12 @@
 </div>
 
 <div>
-  <app-navbar></app-navbar>
+  <app-navbar (citta)="getCitta($event)"></app-navbar>
 </div>
 
-<div>
-  <app-weather></app-weather>
-</div>
+<!-- <div>
+  <app-weather [weatherData] = "weatherData"  ></app-weather>
+</div> -->
 
 <div>
   <app-citta-principali></app-citta-principali>

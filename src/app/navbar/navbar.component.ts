@@ -9,7 +9,8 @@ import { ApixuService } from '../apixu.service';
 })
 export class NavbarComponent implements OnInit {
   public weatherSearchForm!: FormGroup;
-  @Output() public weatherData: any;
+  public weatherData: any;
+  @Output() city = new EventEmitter();
 
 
   constructor(
@@ -29,6 +30,11 @@ export class NavbarComponent implements OnInit {
     .subscribe(data => { this.weatherData = data;
      console.log(this.weatherData)
     });
+  }
+
+  addCitta(citta: any){
+    this.city.emit();
+
   }
 
 }

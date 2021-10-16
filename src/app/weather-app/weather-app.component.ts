@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { Component, OnInit, Input } from '@angular/core';
+import { FormBuilder,} from '@angular/forms';
 import { ApixuService } from '../apixu.service';
 
 @Component({
@@ -8,8 +8,8 @@ import { ApixuService } from '../apixu.service';
   styleUrls: ['./weather-app.component.css'],
 })
 export class WeatherComponent implements OnInit {
-  public weatherSearchForm!: FormGroup;
-  public weatherData: any;
+ @Input() public weatherSearchForm: any;
+ @Input()  public weatherData: any;
 
 
   constructor(
