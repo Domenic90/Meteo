@@ -8,7 +8,7 @@ import { ApixuService } from '../apixu.service';
   styleUrls: ['./weather-app.component.css'],
 })
 export class WeatherComponent implements OnInit {
- @Input() public weatherSearchForm: any;
+ public weatherSearchForm: any;
  @Input()  public weatherData: any;
 
 

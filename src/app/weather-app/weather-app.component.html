@@ -1,39 +1,27 @@
 <div class="container">
 
-  <div class="row">
-    <div class="col-sm-6">
-      <h3 class="text-center my-4">Ricerca per Località:</h3>
-      <form [formGroup]="weatherSearchForm" (ngSubmit)="sendToAPIXU(weatherSearchForm.value)">
-        <div class="form-group">
-          <input class="form-control" type="text" id="weatherLocation" aria-describedby="weatherLocation"
-            placeholder="Inserisci la tua località" formControlName="location" />
+  <div class="row g-3">
+    <div class="col-md-8">
+      <div class="card text-center">
+        <div class="card-header">
+          Località Selezionata
         </div>
-        <div class="text-center my-4">
-          <button type="submit" class="btn btn-success btn-md">
-            Visualizza previsioni Meteo</button>
+        <div class="card-body">
+          <h5 class="card-title">Dettagli Meteo:</h5>
+          <p class="card-text">Città: {{this.weatherData?.request.query}}</p>
+          <p class="card-text">Ora Locale: {{this.weatherData?.current.observation_time}}</p>
+          <p class="card-text">Condizioni Meteo Attuali: {{this.weatherData?.current.weather_descriptions}}
+            <img src={{this.weatherData?.current.weather_icons[0]}} style="width: 25px;">
+          </p>
+          <p class="card-text">Temperatura in gradi Celsius: {{this.weatherData?.current.temperature}} </p>
+          <a href="http://localhost:4200/" class="btn btn-success">Pulisci</a>
         </div>
-      </form>
-    </div>
-    <div class="m-auto" style="max-width: 540px;">
-      <div class="row g-3">
-        <div class="col-md-4">
-          <img src="assets/img/IconeMeteo.jpg" style="width: 150px; height: 200px; position: relative; top: 17px;"
-            class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Dettagli Meteo</h5>
-            <p class="card-text">Città: {{this.weatherData?.request.query}}</p>
-            <p class="card-text">Ora Locale: {{this.weatherData?.current.observation_time}}</p>
-            <p class="card-text">Condizioni Meteo Attuali: {{this.weatherData?.current.weather_descriptions}}
-              <img src={{this.weatherData?.current.weather_icons[0]}} style="width: 25px;">
-            </p>
-            <p class="card-text">Temperatura in gradi Celsius: {{this.weatherData?.current.temperature}} </p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
+        <div class="card-footer text-muted">
+          Last updated 3 mins ago
         </div>
       </div>
+
+
     </div>
   </div>
-
 </div>
