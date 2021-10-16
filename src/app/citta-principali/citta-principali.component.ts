@@ -29,9 +29,6 @@ export class CittaPrincipaliComponent implements OnInit {
 
 
 
-
-
-
   sendToAPIXU() {
     this.apixuService
     .getWeather(location)
