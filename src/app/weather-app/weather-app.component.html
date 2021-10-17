@@ -2,18 +2,19 @@
 
   <div class="row g-3">
     <div class="col-md-8">
+
       <div class="card text-center">
         <div class="card-header">
           Località Selezionata
         </div>
-        <div class="card-body">
+        <div class="card-body" style="background-color: skyblue">
           <h5 class="card-title">Dettagli Meteo:</h5>
           <p class="card-text">Città: {{this.weatherData?.request.query}}</p>
-          <p class="card-text">Ora Locale: {{this.weatherData?.current.observation_time}}</p>
+          <p class="card-text">Data e Ora Locale: {{this.weatherData?.location.localtime}}</p>
           <p class="card-text">Condizioni Meteo Attuali: {{this.weatherData?.current.weather_descriptions}}
             <img src={{this.weatherData?.current.weather_icons[0]}} style="width: 25px;">
           </p>
-          <p class="card-text">Temperatura in gradi Celsius: {{this.weatherData?.current.temperature}} </p>
+          <p class="card-text">Temperatura in gradi Celsius: {{this.weatherData?.current.temperature}}° </p>
           <a href="http://localhost:4200/" class="btn btn-success">Pulisci</a>
         </div>
         <div class="card-footer text-muted">
@@ -24,4 +25,5 @@
 
     </div>
   </div>
+
 </div>

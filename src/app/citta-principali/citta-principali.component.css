@@ -2,3 +2,15 @@
   position: relative;
   top: 50px;
 }
+
+.card {
+  width: 414px;
+  height: 320px;
+}
+
+.card-img-top {
+  width: 413px;
+  height: 320px;
+}
+
+

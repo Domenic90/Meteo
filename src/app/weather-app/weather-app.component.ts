@@ -9,7 +9,7 @@ import { ApixuService } from '../apixu.service';
 })
 export class WeatherComponent implements OnInit {
  public weatherSearchForm: any;
- @Input()  public weatherData: any;
+ @Input() public  weatherData: any;
 
 
   constructor(
@@ -20,7 +20,9 @@ export class WeatherComponent implements OnInit {
   ngOnInit(): void {
     this.weatherSearchForm = this.formBuilder.group({
       location: [''],
-    });
+   });
+
+
   }
 
   sendToAPIXU(formValues: any) {
