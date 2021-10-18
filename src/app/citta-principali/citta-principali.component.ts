@@ -8,19 +8,19 @@ import { ApixuService } from '../apixu.service';
 })
 export class CittaPrincipaliComponent implements OnInit {
   weatherData: any;
-  City: any[] = ["Milano", "Roma", "Napoli", "Torino", "Firenze", "Palermo"]
-
-
+  City: any[] = ['Milan', 'Rome', 'Naples', 'Turin', 'Florence', 'Palermo'];
 
   constructor(private apixuService: ApixuService) {}
 
   ngOnInit(): void {
-     this.City[0] = this.apixuService.getWeather('Milan').subscribe((data) => {
-      this.weatherData = data;
-     });
+    for (let i = 0; i < this.City.length; i++) {
+      this.apixuService.getWeather(this.City[i]).subscribe(data => {
+        this.weatherData = data;
+        document.getElementById(this.City[i]);
+        console.log(this.weatherData);
+      });
 
-
-
+      /*
     this.City[1]= this.apixuService.getWeather('Rome').subscribe((data) => {
       this.weatherData = data;
       console.log(this.weatherData);
@@ -52,6 +52,7 @@ export class CittaPrincipaliComponent implements OnInit {
     this.City[5]= this.apixuService.getWeather('Palermo').subscribe((data) => {
       this.weatherData = data;
       console.log(this.weatherData);
-    });
+    }); */
+    }
   }
 }

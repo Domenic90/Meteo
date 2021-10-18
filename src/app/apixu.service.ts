@@ -10,7 +10,7 @@ export class ApixuService {
   constructor(private http: HttpClient) {}
 
   getWeather(location: any){
-    let urlApi = 'http://api.weatherstack.com/current?access_key=0840ca52f9ffee64601f46ea7fbf224d&query='
+    let urlApi = 'http://api.weatherstack.com/current?access_key=4f9d2fe9a9e06b6b54ab75936a9c69f4&query='
     let input = location;
     let urlComplet = urlApi + input
     return this.http.get(
