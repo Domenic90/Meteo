@@ -2,13 +2,15 @@
 
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col">
-      <div class="card h-100" id="Milano">
+      <div class="card h-100">
         <img src="assets/img/Milano.jpg" class="card-img-top" alt="...">
           <div class="card-body">
-          <h5 class="card-title">Milano {{this.City[0]}} {{this.weatherData?.request.query}}</h5>
-          <p class="card-text">Condizioni Meteo di Oggi: {{this.weatherData?.current.weather_descriptions}}
-            <img src={{this.weatherData?.current.weather_icons[0]}} style="width: 25px;">
-            {{this.weatherData?.current.temperature}}°
+           <!--  inietto nel html la variabile City con relativa posizione array corrispondente alla città
+            e ne leggo i dati restituiti dal Json dopo la chiamata api  -->
+          <h5 class="card-title">Milano {{this.City[0]?.request?.query}}</h5>
+          <p class="card-text">Condizioni Meteo di Oggi: {{this.City[0].current?.weather_descriptions}}
+            <img src={{this.City[0].current?.weather_icons[0]}} style="width: 25px;">
+            {{this.City[0]?.current?.temperature}}°
           </p>
         </div>
         <div class="card-footer">
@@ -20,10 +22,10 @@
       <div class="card h-100" id="Roma">
         <img src="assets/img/Roma.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Roma {{this.City[1]}} {{this.weatherData?.request.query}}</h5>
-          <p class="card-text">Condizioni Meteo di Oggi: {{this.weatherData?.current.weather_descriptions}}
-            <img src={{this.weatherData?.current.weather_icons[0]}} style="width: 25px;">
-            {{this.weatherData?.current.temperature}}°
+          <h5 class="card-title">Roma {{this.City[1]?.request?.query}}</h5>
+          <p class="card-text">Condizioni Meteo di Oggi: {{this.City[1]?.current?.weather_descriptions}}
+            <img src={{this.City[1]?.current?.weather_icons[0]}} style="width: 25px;">
+            {{this.City[1]?.current?.temperature}}°
           </p>
         </div>
         <div class="card-footer">
@@ -35,10 +37,10 @@
       <div class="card h-100" id="Napoli">
         <img src="assets/img/Napoli.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Napoli {{this.City[2]}}  {{this.weatherData?.request.query}}</h5>
-          <p class="card-text">Condizioni Meteo di Oggi: {{this.weatherData?.current.weather_descriptions}}
-            <img src={{this.weatherData?.current.weather_icons[0]}} style="width: 25px;">
-            {{this.weatherData?.current.temperature}}°
+          <h5 class="card-title">Napoli {{this.City[2]?.request?.query}}</h5>
+          <p class="card-text">Condizioni Meteo di Oggi: {{this.City[2]?.current?.weather_descriptions}}
+            <img src={{this.City[2]?.current?.weather_icons[0]}} style="width: 25px;">
+            {{this.City[2]?.current?.temperature}}°
           </p>
         </div>
         <div class="card-footer">
@@ -47,17 +49,21 @@
       </div>
     </div>
   </div>
+
+
   <br>
   <br>
+
+
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col">
       <div class="card h-100" id="Torino">
         <img src="assets/img/Torino.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Torino {{this.City[3]}}  {{this.weatherData?.request.query}}</h5>
-          <p class="card-text">Condizioni Meteo di Oggi: {{this.weatherData?.current.weather_descriptions}}
-            <img src={{this.weatherData?.current.weather_icons[0]}} style="width: 25px;">
-            {{this.weatherData?.current.temperature}}°
+          <h5 class="card-title">Torino {{this.City[3]?.request?.query}}</h5>
+          <p class="card-text">Condizioni Meteo di Oggi: {{this.City[3]?.current?.weather_descriptions}}
+            <img src={{this.City[3]?.current?.weather_icons[0]}} style="width: 25px;">
+            {{this.City[3]?.current?.temperature}}°
           </p>
         </div>
         <div class="card-footer">
@@ -69,10 +75,10 @@
       <div class="card h-100" id="Firenze">
         <img src="assets/img/Firenze.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Firenze {{this.City[4]}} {{this.weatherData?.request.query}} </h5>
-          <p class="card-text">Condizioni Meteo di Oggi: {{this.weatherData?.current.weather_descriptions}}
-            <img src={{this.weatherData?.current.weather_icons[0]}} style="width: 25px;">
-            {{this.weatherData?.current.temperature}}°
+          <h5 class="card-title">Firenze {{this.City[4]?.request?.query}} </h5>
+          <p class="card-text">Condizioni Meteo di Oggi: {{this.City[4]?.current?.weather_descriptions}}
+            <img src={{this.City[4]?.current?.weather_icons[0]}} style="width: 25px;">
+            {{this.City[4]?.current?.temperature}}°
           </p>
         </div>
         <div class="card-footer">
@@ -84,10 +90,10 @@
       <div class="card h-100" id="Palermo">
         <img src="assets/img/Palermo.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Palermo {{this.City[5]}}  {{this.weatherData?.request.query}}</h5>
-          <p class="card-text">Condizioni Meteo di Oggi: {{this.weatherData?.current.weather_descriptions}}
-            <img src={{this.weatherData?.current.weather_icons[0]}} style="width: 25px;">
-            {{this.weatherData?.current.temperature}}°
+          <h5 class="card-title">Palermo {{this.City[5]?.request?.query}}</h5>
+          <p class="card-text">Condizioni Meteo di Oggi: {{this.City[5]?.current?.weather_descriptions}}
+            <img src={{this.City[5]?.current?.weather_icons[0]}} style="width: 25px;">
+            {{this.City[5]?.current?.temperature}}°
           </p>
         </div>
         <div class="card-footer">
@@ -95,9 +101,11 @@
         </div>
       </div>
     </div>
+    </div>
+
+
   </div>
 
-</div>
 
 <br>
 <br>

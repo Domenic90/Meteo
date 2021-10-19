@@ -11,7 +11,7 @@ export class AppComponent {
 
 
   getCitta(event: any) {
-    this.weatherData
+    this.weatherData = event;
 
   }
 

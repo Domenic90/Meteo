@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 import { WeatherComponent } from './weather-app/weather-app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { ApixuService } from './apixu.service';
+import { ApiService } from './api.service';
 import { BackgroundComponent } from './background/background.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CittaPrincipaliComponent } from './citta-principali/citta-principali.component';
@@ -26,7 +26,7 @@ import { FooterComponent } from './footer/footer.component';
     HttpClientModule
 
   ],
-  providers: [ApixuService],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
