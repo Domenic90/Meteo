@@ -1,7 +1,5 @@
-.card {
+.container{
   position: relative;
-  left: 220px;
-  top: 15px;
-
+  bottom: 50px;
 }
 

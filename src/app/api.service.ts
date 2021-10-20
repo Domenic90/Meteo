@@ -10,10 +10,6 @@ export class ApiService {
 
   //metodo per lettura e chiamata api in formato Json da weatherstack.com
   getWeather(location: any) {
-    let urlApi =
-      'http://api.weatherstack.com/current?access_key=39c0abeee48668d4d7a48dd86d0235a6&query=';
-    let input = location;
-    let urlComplet = urlApi + input;
-    return this.http.get(urlComplet);
+    return this.http.get('http://api.weatherstack.com/current?access_key=9d1602c39e211ca2e1e07bb086a3c9c4&query=' +  location);
   }
 }

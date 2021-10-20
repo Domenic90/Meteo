@@ -1,24 +1,22 @@
-.navbar {
-  position: relative;
-  bottom: 24px;
-}
-
 a {
   position: relative;
   left: 10px;
+  bottom: 2px;
 }
 
 input {
   position: relative;
   right: 10px;
+  bottom: 2px;
 }
 
 button {
   position: relative;
   right: 10px;
+  bottom: 2px;
 }
 
-.btn-success{
-  background-color:dodgerblue;
+.container{
+  position: relative;
+  bottom: 340px;
 }
-

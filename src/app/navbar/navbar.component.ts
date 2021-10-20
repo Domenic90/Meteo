@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter} from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { ApiService } from '../api.service';
 
@@ -8,13 +8,10 @@ import { ApiService } from '../api.service';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-
-  public weatherSearchForm: any;
-
-  public weatherData: any;
-
+  weatherSearchForm: any;
+  weatherData: any;
   //istanza di un nuovo oggetto per gli eventi nel tag button
-  city = new EventEmitter<string>();
+  @Output() city = new EventEmitter<string>();
 
   //nel costruttore dichiaro le variabili e assegno il tipo in base a ciò che mi occorre importando i moduli e i servizi
   constructor(
@@ -38,7 +35,7 @@ export class NavbarComponent implements OnInit {
   }
 
   //metodo per la gestione degli eventi nel tag button
-  getCittaInput(city: any) {
+  getCityInput(city: any) {
     this.city.emit(city.target.value);
   }
 }

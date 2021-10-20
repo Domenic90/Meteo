@@ -1,31 +1,24 @@
 <div class="container">
 
-  <div class="row g-3">
-    <div class="col-md-8">
-
-      <div class="card text-center">
-        <div class="card-header">
-          Località Selezionata
-        </div>
-        <!-- inietto nel html la variabile weatherData per leggere i dati che mi resituisce
-          il json dopo la chiamata api e stamparli in pagina -->
-        <div class="card-body" style="background-color: skyblue">
-          <h5 class="card-title">Dettagli Meteo:</h5>
-          <p class="card-text">Città: {{this.weatherData?.request?.query}}</p>
-          <p class="card-text">Data e Ora Locale: {{this.weatherData?.location?.localtime}}</p>
-          <p class="card-text">Condizioni Meteo Attuali: {{this.weatherData?.current?.weather_descriptions}}
-            <img src={{this.weatherData?.current?.weather_icons[0]}} style="width: 25px;">
-          </p>
-          <p class="card-text">Temperatura in gradi Celsius: {{this.weatherData?.current?.temperature}}° </p>
-          <a href="http://localhost:4200/" class="btn btn-success">Pulisci</a>
-        </div>
-        <div class="card-footer text-muted">
-          Last updated 3 mins ago
-        </div>
-      </div>
-
-
-    </div>
+<div class="card text-center">
+  <div class="card-header">
+    Località Selezionata
   </div>
+  <!-- inietto nel html la variabile weatherData per leggere i dati che mi resituisce
+          il json dopo la chiamata api e stamparli in pagina -->
+  <div class="card-body" style="background-color:rgb(22, 67, 218)">
+    <h4 class="card-title">Previsioni Meteo:</h4>
+    <p class="card-text"><b>Città:</b> {{this.weatherData?.request?.query}}</p>
+    <p class="card-text"><b>Data e Ora Locale:</b> {{this.weatherData?.location?.localtime}}</p>
+    <p class="card-text"><b>Condizioni Meteo Attuali:</b> {{this.weatherData?.current?.weather_descriptions}}
+      <img src={{this.weatherData?.current?.weather_icons[0]}} style="width: 25px;">
+    </p>
+    <p class="card-text"><b>Temperatura in gradi Celsius:</b> {{this.weatherData?.current?.temperature}}° </p>
+    <a href="http://localhost:4200/" class="btn btn-success">Pulisci</a>
+  </div>
+  <div class="card-footer text-muted">
+    Last updated 3 mins ago
+  </div>
+</div>
 
 </div>
