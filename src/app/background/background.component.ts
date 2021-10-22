@@ -3,13 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-background',
   templateUrl: './background.component.html',
-  styleUrls: ['./background.component.css']
+  styleUrls: ['./background.component.css'],
 })
 export class BackgroundComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

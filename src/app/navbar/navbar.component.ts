@@ -31,6 +31,8 @@ export class NavbarComponent implements OnInit {
     this.apiService.getWeather(formValues.location).subscribe((data) => {
       this.weatherData = data;
       console.log(this.weatherData);
+
+
     });
   }
 

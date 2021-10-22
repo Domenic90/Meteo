@@ -8,12 +8,6 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
 
-  public weatherData: any;
 
-
-  getCity(event: any) {
-    this.weatherData = event;
-
-  }
 
 }
