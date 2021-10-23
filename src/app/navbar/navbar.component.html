@@ -4,18 +4,16 @@
     <a class="btn btn-light" href="http://localhost:4200/">METEO</a>
     <!-- form di inserimento dati e richiesta api tramite metodo sendToApi -->
     <form class="d-flex" [formGroup]="weatherSearchForm" (ngSubmit)="sendToAPI(weatherSearchForm.value)">
-    <input *ngIf="this.weatherData.success==false" class="form-control me-2" placeholder="Località non trovata"
-        style="border-color: red; border-width: 3px ; position:relative; left: 216px;">
-      <input  type="search" class="form-control me-2" id="weatherLocation" placeholder="Inserisci la tua località"
-        formControlName="location" aria-label="weatherLocation" style="position: static;">
+      <input *ngIf="this.weatherData?.success==false" type="search" class="form-control me-2"
+        placeholder="Inserisci la tua località" formControlName="location"
+        style="border-color: red; border-width: 3px ; position: relative; left: 216px;">
+      <input type="search" class="form-control me-2" id="weatherLocation" placeholder="Inserisci la tua località"
+        formControlName="location" aria-label="weatherLocation">
       <button type="submit" class="btn btn-success" (click)="getCityInput($event)">Cerca</button>
     </form>
   </nav>
 
 </div>
-
-
-
 
 <!-- invio dei dati per la lettura al componente app-weather -->
 <app-weather [weatherData]="weatherData"></app-weather>

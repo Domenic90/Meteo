@@ -7,17 +7,15 @@
         <!-- inietto nel html la variabile weatherData per leggere i dati che mi resituisce
           il json dopo la chiamata api e stamparli in pagina -->
 
-        <h4 class="card-title text-white ">Previsioni Meteo:</h4>
-        <p class="card-text text-white"><b>Città:</b> {{this.weatherData?.request?.query}}</p>
-        <p class="card-text text-white "><b>Data e Ora Locale:</b> {{this.weatherData?.location?.localtime}}</p>
-        <p class="card-text text-white"><b>Condizioni Meteo Attuali:</b>
-          {{this.weatherData?.current?.weather_descriptions}}
-          <img src={{this.weatherData?.current?.weather_icons[0]}} style="width: 25px;">
-        </p>
-        <p class="card-text text-white "><b>Temperatura in gradi Celsius:</b>
-          {{this.weatherData?.current?.temperature}}° </p>
+        <h4 class="card-title text-white" >Previsioni Meteo:</h4>
+        <p class="card-text text-white"><b>Città:</b> {{this.weatherData?.location?.name}}, {{this.weatherData?.location?.region}}, {{this.weatherData?.location?.country}}  </p>
+        <p class="card-text text-white"><b>Data e Ora Locale:</b> {{this.weatherData?.location?.localtime}}</p>
+        <p class="card-text text-white"><b>Condizioni Meteo Attuali:</b> {{this.weatherData?.current?.weather_descriptions}}
+          <img src={{this.weatherData?.current?.weather_icons[0]}} style="width: 25px;"> </p>
+        <p class="card-text text-white text-center "><b>Temperatura in gradi Celsius:</b> {{this.weatherData?.current?.temperature}}°</p>
       </div>
     </div>
   </div>
 
 </div>
+

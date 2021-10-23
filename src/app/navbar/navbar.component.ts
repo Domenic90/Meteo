@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { ApiService } from '../api.service';
 
@@ -31,8 +31,6 @@ export class NavbarComponent implements OnInit {
     this.apiService.getWeather(formValues.location).subscribe((data) => {
       this.weatherData = data;
       console.log(this.weatherData);
-
-
     });
   }
 

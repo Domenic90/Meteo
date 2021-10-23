@@ -9,6 +9,7 @@ import { BackgroundComponent } from './background/background.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CittaPrincipaliComponent } from './citta-principali/citta-principali.component';
 import { FooterComponent } from './footer/footer.component';
+import { TitoloCentraleComponent } from './titolo-centrale/titolo-centrale.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FooterComponent } from './footer/footer.component';
     BackgroundComponent,
     NavbarComponent,
     CittaPrincipaliComponent,
-    FooterComponent
+    FooterComponent,
+    TitoloCentraleComponent
 
   ],
   imports: [
