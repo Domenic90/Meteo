@@ -26,7 +26,7 @@ export class NavbarComponent implements OnInit {
     });
   }
 
-  //metodo per richiesta e lettura dati da api.service
+  //funzione per richiesta e lettura dati da api.service
   sendToAPI(formValues: any) {
     this.apiService.getWeather(formValues.location).subscribe((data) => {
       this.weatherData = data;
@@ -34,7 +34,7 @@ export class NavbarComponent implements OnInit {
     });
   }
 
-  //metodo per la gestione degli eventi nel tag button
+  //funzione per la gestione degli eventi nel tag button
   getCityInput(city: any) {
     this.city.emit(city.target.value);
   }
