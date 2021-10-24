@@ -9,7 +9,7 @@ import { ApiService } from '../api.service';
 })
 export class NavbarComponent implements OnInit {
   weatherSearchForm: any;
-  weatherData: any;
+  weatherData: any = false;
   //istanza di un nuovo oggetto per gli eventi nel tag button
   @Output() city = new EventEmitter<string>();
 
