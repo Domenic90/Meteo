@@ -8,7 +8,7 @@ import { ApiService } from '../api.service';
 })
 export class CittaPrincipaliComponent implements OnInit {
   //dichiaro ed inizializzo un array delle città statiche in pagina
-  City: any[] = ['Milan', 'Rome', 'Naples', 'Turin', 'Florence', 'Palermo'];
+   City: any[] = ['Milan', 'Rome', 'Naples', 'Turin', 'Florence', 'Palermo'];
 
   constructor(private apiService: ApiService) {}
 
