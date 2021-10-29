@@ -1,14 +1,14 @@
 <div class="container">
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col">
-      <div class="card h-100">
+      <div class="card h-100" id="Milano">
         <img src="assets/img/Milano.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <!--  inietto nel html la variabile City con relativa posizione array corrispondente alla città
             e ne leggo i dati restituiti dal Json dopo la chiamata api  -->
           <h5 class="card-title">Milano</h5>
           <p class="card-text"><b>Condizioni Meteo Attuali:</b> {{this.City[0].current?.weather_descriptions}}
-            <img src={{this.City[0].current?.weather_icons[0]}} style="width: 25px;">
+            <img class="imgIcon" src={{this.City[0].current?.weather_icons[0]}}>
             {{this.City[0]?.current?.temperature}}°
           </p>
         </div>
@@ -23,7 +23,7 @@
         <div class="card-body">
           <h5 class="card-title">Roma</h5>
           <p class="card-text"><b>Condizioni Meteo Attuali:</b> {{this.City[1]?.current?.weather_descriptions}}
-            <img src={{this.City[1]?.current?.weather_icons[0]}} style="width: 25px;">
+            <img class="imgIcon"  src={{this.City[1]?.current?.weather_icons[0]}}>
             {{this.City[1]?.current?.temperature}}°
           </p>
         </div>
@@ -38,7 +38,7 @@
         <div class="card-body">
           <h5 class="card-title">Napoli</h5>
           <p class="card-text"><b>Condizioni Meteo Attuali:</b> {{this.City[2]?.current?.weather_descriptions}}
-            <img src={{this.City[2]?.current?.weather_icons[0]}} style="width: 25px;">
+            <img class="imgIcon" src={{this.City[2]?.current?.weather_icons[0]}}>
             {{this.City[2]?.current?.temperature}}°
           </p>
         </div>
@@ -59,7 +59,7 @@
         <div class="card-body">
           <h5 class="card-title">Torino</h5>
           <p class="card-text"><b>Condizioni Meteo Attuali:</b> {{this.City[3]?.current?.weather_descriptions}}
-            <img src={{this.City[3]?.current?.weather_icons[0]}} style="width: 25px;">
+            <img class="imgIcon" src={{this.City[3]?.current?.weather_icons[0]}}>
             {{this.City[3]?.current?.temperature}}°
           </p>
         </div>
@@ -74,7 +74,7 @@
         <div class="card-body">
           <h5 class="card-title">Firenze</h5>
           <p class="card-text"><b>Condizioni Meteo Attuali:</b> {{this.City[4]?.current?.weather_descriptions}}
-            <img src={{this.City[4]?.current?.weather_icons[0]}} style="width: 25px;">
+            <img class="imgIcon" src={{this.City[4]?.current?.weather_icons[0]}}>
             {{this.City[4]?.current?.temperature}}°
           </p>
         </div>
@@ -89,7 +89,7 @@
         <div class="card-body">
           <h5 class="card-title">Palermo</h5>
           <p class="card-text"><b>Condizioni Meteo Attuali:</b> {{this.City[5]?.current?.weather_descriptions}}
-            <img class="imgIcon" src={{this.City[5]?.current?.weather_icons[0]}} style="width: 25px;">
+            <img class="imgIcon" src={{this.City[5]?.current?.weather_icons[0]}}>
             {{this.City[5]?.current?.temperature}}°
           </p>
         </div>
