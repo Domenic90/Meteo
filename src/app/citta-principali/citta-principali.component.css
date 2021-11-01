@@ -1,15 +1,15 @@
+.marginiCitta{
+  margin-bottom: 70px;
+}
+
 h5 {
   color: dimgray;
 }
 
-.card {
-  width: 414px;
-  height: 320px;
-}
-
 .card-img-top {
-  width: 413px;
-  height: 320px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .container {
@@ -20,3 +20,5 @@ h5 {
 .imgIcon{
   width: 25px
 }
+
+
