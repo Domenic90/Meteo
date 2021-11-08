@@ -12,7 +12,7 @@ export class CittaPrincipaliComponent implements OnInit {
 
   constructor(private apiService: ApiService) {}
 
-  /* tramite ciclo for faccio un ciclo del array City per leggerne i valori e tramite i metodi
+  /* tramite ciclo for faccio un ciclo del array City per leggerne i valori e tramite il metodo
   faccio richiesta api per poi leggerne i dati. Effettuo questa operazione nel metodo ngOnInit
   in modo che la visualizzazione dei dati avvenga subito all'atterraggio in pagina */
   ngOnInit(): void {

@@ -9,7 +9,7 @@ import { ApiService } from '../api.service';
 })
 export class NavbarComponent implements OnInit {
   weatherSearchForm: any;
-  weatherData: any = false;
+  weatherData: any;
   //istanza di un nuovo oggetto per gli eventi nel tag button
   @Output() city = new EventEmitter<string>();
 
@@ -26,7 +26,7 @@ export class NavbarComponent implements OnInit {
     });
   }
 
-  //funzione per richiesta e lettura dati da api.service
+  //metodo per richiesta e lettura dati da api.service
   sendToAPI(formValues: any) {
     this.apiService.getWeather(formValues.location).subscribe((data) => {
       this.weatherData = data;
